@@ -1,0 +1,90 @@
+
+
+
+<div class="header bg-gradient-danger pb-8 pt-5 pt-md-8">
+  <div class="container-fluid">
+    <div class="header-body">
+      <!-- Card stats -->
+
+    </div>
+  </div>
+</div>
+
+<!-- Page content -->
+<div class="container-fluid mt--7">
+  <!-- Table -->
+  <div class="row">
+    <div class="col">
+      <div class="card shadow">
+        <div class="card-header border-0">
+          <h3 class="mb-0" class="text-center">appel d'offre associer au demande d'achat</h3>
+          <button type="button"  class="btn btn-primary" (click)="getAppelOffreByEtat(2)" >en cours(2)</button>
+
+        </div>
+        <div class="table-responsive">
+          <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+              <tr>
+                <th scope="col">reference</th>
+                <th scope="col">dateCreationC</th>
+                <th scope="col">dateLimit</th>
+                <th scope="col">datePayment</th>
+                <th scope="col">prixInitiale</th>
+                <th scope="col">commentaire</th>
+                <th scope="col">etat</th>
+                <th scope="col"></th>
+
+              </tr>
+            </thead>
+            <tbody  *ngFor="let item of ListAppeloffre">
+              <tr>
+
+                <td>
+                  {{item.reference}}
+                </td>
+                <td>
+                  {{item.dateCreationC}}
+                </td>
+                <td>
+                  {{item.dateLimit}}
+                </td>
+                <td>
+                  {{item.datePayment}}
+                </td>
+                <td>
+                  {{item.prixInitiale}}
+                </td>
+                <td>
+                  {{item.commentaire}}
+                </td>
+                <td>
+                  {{item.etat}}
+                </td>
+
+
+<td>
+
+<button (click)="Creerdevis(item.idAppeloffre)" class="btn btn-danger">associer devis</button>
+</td>
+
+
+
+
+              </tr><td>
+
+              <button type="button"  class="btn btn-primary" (click)="exportPDF(item.idAppelOffre)" download="export.pdf">Telecharger Appel d'offre</button>
+            </td>
+
+
+
+            </tbody>
+
+
+          </table>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>

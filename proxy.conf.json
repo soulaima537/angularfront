@@ -1,0 +1,13 @@
+{
+  "/APPELOFFRE-SERVICE/*": {
+    "target": "http://localhost:9999",
+    "secure": false
+  },
+
+    "/DEMANDEACHAT-SERVICE/*": {
+      "target": "http://localhost:9999",
+      "secure": false
+    }
+  }
+
+
